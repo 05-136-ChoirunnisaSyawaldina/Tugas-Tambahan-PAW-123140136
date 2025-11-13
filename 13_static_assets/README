@@ -1,0 +1,7 @@
+# 13: CSS/JS/Images Files With Static Assets
+
+## Analisis
+Langkah ini menambahkan kemampuan menyajikan file statis (CSS, JavaScript, Gambar).
+1. **add_static_view**: Di `__init__.py`, kami menggunakan `config.add_static_view(name='static', path='tutorial:static')`. Ini memetakan URL path `/static/` ke direktori fisik `tutorial/static` di dalam package.
+2. **Generating URLs**: Di template, kami tidak menulis URL CSS secara hardcode (misal `/static/app.css`), melainkan menggunakan helper `${request.static_url('tutorial:static/app.css')}`. Ini memastikan URL yang dihasilkan selalu valid meskipun aplikasi dipindahkan ke sub-path lain (fleksibilitas refactoring).
+3. **Functional Test**: Kami menambahkan tes untuk memverifikasi bahwa file CSS dapat diakses via HTTP request dan mengembalikan konten yang benar.
