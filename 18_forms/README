@@ -1,0 +1,7 @@
+# 18: Forms with Deform
+
+## Analisis
+Langkah ini mengintegrasikan library `Deform` dan `Colander` untuk pembuatan form yang canggih.
+1. **Schema**: Menggunakan `colander` untuk mendefinisikan struktur data (Schema) yang diharapkan, termasuk tipe data dan widget (RichText).
+2. **Deform**: Menggunakan schema tersebut untuk me-render HTML form secara otomatis, lengkap dengan validasi server-side.
+3. **Self-Posting Forms**: Menggunakan pola di mana view yang sama menangani render form (GET) dan pemrosesan data (POST). Jika validasi gagal, form dirender ulang dengan pesan error. Jika sukses, data disimpan (di dictionary memori `pages`) dan user di-redirect.
