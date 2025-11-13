@@ -1,0 +1,7 @@
+# 05: Unit Tests and pytest
+
+## Analisis
+Pada langkah ini, kami menerapkan *Unit Testing* untuk memastikan kualitas kode.
+1. **Library pytest**: Kami menambahkan `pytest` ke dalam `dev_requires` di `setup.py` sebagai *test runner* yang lebih fleksibel dibanding modul bawaan Python.
+2. **Isolation Testing**: File `tests.py` menggunakan `pyramid.testing` untuk membuat lingkungan tes yang terisolasi. `DummyRequest` digunakan untuk mensimulasikan HTTP request tanpa menjalankan server WSGI yang sebenarnya.
+3. **Assert**: Fungsi `test_hello_world` memverifikasi bahwa view `hello_world` mengembalikan objek respon dengan status code 200 (OK). Ini memastikan logika dasar aplikasi berjalan benar.
