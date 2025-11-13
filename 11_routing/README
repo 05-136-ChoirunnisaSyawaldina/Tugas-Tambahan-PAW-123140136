@@ -1,0 +1,7 @@
+# 11: Dispatching URLs To Views With Routing
+
+## Analisis
+Langkah ini memperkenalkan *URL Dispatch* dinamis.
+1. **Replacement Patterns**: Pada `__init__.py`, kami mendefinisikan route dengan pola `/howdy/{first}/{last}`. Tanda kurung kurawal menandakan bagian URL yang dinamis.
+2. **Matchdict**: Di dalam view, kami mengakses `self.request.matchdict`. Objek ini adalah dictionary yang berisi nilai-nilai aktual dari URL yang cocok dengan pola route (misalnya `matchdict['first']` akan berisi "Jane" jika URL-nya `/howdy/Jane/Doe`).
+3. **Fleksibilitas**: Teknik ini memungkinkan pembuatan URL yang bersih dan SEO-friendly, serta mengirimkan parameter langsung melalui struktur URL, bukan hanya lewat query string (`?key=value`).
