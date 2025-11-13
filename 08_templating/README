@@ -1,0 +1,7 @@
+# 08: HTML Generation With Templating
+
+## Analisis
+Langkah ini memisahkan logika presentasi dari logika bisnis menggunakan *Templating Engine*.
+1. **Pyramid Chameleon**: Kami menginstal dan mengaktifkan `pyramid_chameleon` melalui `config.include()`. Ini memungkinkan penggunaan file `.pt` (Page Template).
+2. **Renderer**: Pada decorator `@view_config`, kami menambahkan parameter `renderer='home.pt'`. Ini memberi tahu Pyramid untuk mengambil data yang dikembalikan oleh fungsi view (berupa dictionary), lalu menggabungkannya dengan template HTML.
+3. **Separation of Concerns**: Kode Python di `views.py` kini jauh lebih bersih karena tidak mengandung string HTML. Ia hanya fokus menyediakan data (`{'name': '...'}`).
