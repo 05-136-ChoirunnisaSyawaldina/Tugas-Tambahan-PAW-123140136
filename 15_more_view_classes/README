@@ -1,0 +1,7 @@
+# 15: More With View Classes
+
+## Analisis
+Langkah ini memperdalam penggunaan View Classes untuk logika aplikasi yang lebih kompleks.
+1. **Shared State**: Melalui `__init__` dan properti `@property`, kami berbagi data (`full_name`, `view_name`) yang bisa diakses oleh semua method view dan template.
+2. **Multiple Views per Route**: Kami mendefinisikan beberapa method (`hello`, `edit`, `delete`) yang melayani route yang sama (`/howdy/...`), tetapi dibedakan berdasarkan `request_method` (GET vs POST) dan `request_param` (tombol mana yang diklik).
+3. **Form Handling**: Ini mendemonstrasikan pola umum aplikasi web: menampilkan formulir (GET), memproses simpan (POST `form.edit`), dan memproses hapus (POST `form.delete`) dalam satu unit logika yang terorganisir.
