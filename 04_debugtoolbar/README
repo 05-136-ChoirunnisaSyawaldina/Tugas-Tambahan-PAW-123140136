@@ -1,0 +1,7 @@
+# 04: Easier Development with debugtoolbar
+
+## Analisis
+Pada tahap ini, kami mengintegrasikan *add-on* `pyramid_debugtoolbar` untuk mempermudah proses debugging.
+1. **Extras Require**: Di `setup.py`, kami mendefinisikan dependensi tambahan menggunakan `extras_require['dev']`. Ini memungkinkan pemisahan antara dependensi utama aplikasi dan alat bantu pengembangan.
+2. **Konfigurasi Add-on**: Kami mengaktifkan toolbar bukan melalui kode Python (`__init__.py`), melainkan melalui file konfigurasi `development.ini` menggunakan direktif `pyramid.includes`.
+3. **Manfaat**: Toolbar ini menyuntikkan kode HTML/CSS ke dalam respon browser yang memberikan akses introspeksi mendalam (request, rendering template, dll) dan menampilkan *traceback* interaktif jika terjadi error.
