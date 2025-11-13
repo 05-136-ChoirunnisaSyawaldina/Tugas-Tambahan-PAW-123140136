@@ -1,0 +1,6 @@
+# 14: AJAX Development With JSON Renderers
+
+## Analisis
+Langkah ini menunjukkan cara membuat endpoint API yang mengembalikan data JSON.
+1. **Renderer JSON**: Pyramid menyediakan built-in renderer `'json'`. Ketika digunakan, ia otomatis mengubah dictionary Python menjadi string JSON dan mengatur header `Content-Type` menjadi `application/json`.
+2. **Multiple View Configs**: Kami menumpuk dua decorator `@view_config` pada satu method view (`hello`). Satu untuk merender HTML (default renderer dari kelas) dan satu lagi khusus untuk rute `hello_json` yang menggunakan renderer JSON. Ini memungkinkan satu logika bisnis melayani dua format output yang berbeda.
