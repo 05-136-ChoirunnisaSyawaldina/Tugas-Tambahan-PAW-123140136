@@ -1,0 +1,7 @@
+# 10: Handling Web Requests and Responses
+
+## Analisis
+Pada percobaan ini, kami mengeksplorasi manipulasi langsung terhadap objek `Request` dan `Response` tanpa menggunakan templating engine.
+1. **HTTP Redirect**: View `home` menggunakan class `HTTPFound` untuk melakukan *redirect* (HTTP Status 302) ke URL `/plain`.
+2. **Request Parameters**: Pada view `plain`, kami mengakses `self.request.params.get('name')` untuk mengambil data query string dari URL (contoh: `?name=Alice`).
+3. **Response Object**: Kami membuat objek `Response` secara manual dengan mengatur `content_type='text/plain'` dan mengisi `body` dengan string hasil olahan. Ini menunjukkan fleksibilitas Pyramid dalam menangani respon non-HTML.
