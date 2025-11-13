@@ -1,0 +1,7 @@
+# 17: Sessions
+
+## Analisis
+Langkah ini mengimplementasikan penyimpanan data sementara menggunakan Session.
+1. **Session Factory**: Di `__init__.py`, kami menggunakan `SignedCookieSessionFactory`. Ini menyimpan data session di cookie browser pengguna secara aman (terenkripsi/signed).
+2. **Akses Session**: Di `views.py`, objek `self.request.session` digunakan seperti dictionary biasa untuk menyimpan dan mengambil nilai `counter`.
+3. **Persistensi**: Nilai counter akan terus bertambah setiap kali halaman di-refresh karena datanya disimpan di session browser, bukan di memori variabel Python sesaat.
