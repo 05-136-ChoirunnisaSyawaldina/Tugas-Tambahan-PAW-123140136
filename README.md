@@ -2,8 +2,6 @@
 
 Dokumentasi ini berisi kumpulan kode program tugas tambahan mata kuliah Pemrograman Web. Proyek ini difokuskan pada eksplorasi mendalam kerangka kerja (framework) **Pyramid** menggunakan bahasa pemrograman Python, dimulai dari konfigurasi dasar hingga pembuatan aplikasi web berbasis database dan form validasi.
 
-## 👤 Profil Mahasiswa
-
 * **Nama:** Choirunnisa Syawaldina
 * **NIM:** 123140018
 * **Kelas:** RA
@@ -11,7 +9,7 @@ Dokumentasi ini berisi kumpulan kode program tugas tambahan mata kuliah Pemrogra
 
 ---
 
-## 📚 Struktur Pembelajaran
+## Struktur Pembelajaran
 
 Repositori ini dibagi menjadi 18 modul terpisah yang merepresentasikan progresi materi pembelajaran:
 
@@ -45,7 +43,7 @@ Repositori ini dibagi menjadi 18 modul terpisah yang merepresentasikan progresi 
 
 ---
 
-## 🛠 Panduan Instalasi
+## Panduan Instalasi
 
 Setiap folder merupakan paket Python independen. Untuk menjalankannya, ikuti langkah berikut:
 
