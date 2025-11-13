@@ -1,0 +1,7 @@
+# 16: Logging
+
+## Analisis
+Langkah ini mengaktifkan sistem logging Python standar dalam aplikasi Pyramid.
+1. **Logger Config**: Di `development.ini`, kami mendefinisikan logger khusus untuk package `tutorial` dengan level `DEBUG`.
+2. **Logging di View**: Di `views.py`, kami mengimpor modul `logging`, membuat instance logger, dan menyisipkan `log.debug('Pesan...')`.
+3. **Output**: Saat aplikasi dijalankan via `pserve`, pesan debug akan muncul di terminal/console, memudahkan pelacakan alur eksekusi program.
