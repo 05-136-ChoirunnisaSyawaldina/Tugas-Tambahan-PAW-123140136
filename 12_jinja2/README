@@ -1,0 +1,7 @@
+# 12: Templating With jinja2
+
+## Analisis
+Percobaan ini mengganti template engine bawaan (Chameleon) dengan **Jinja2**, yang merupakan salah satu template engine paling populer di ekosistem Python.
+1. **Instalasi Add-on**: Kami menambahkan `pyramid_jinja2` ke dalam `setup.py` sebagai dependensi. Ini adalah library eksternal yang memungkinkan Pyramid memproses file `.jinja2`.
+2. **Konfigurasi Imperatif**: Di `__init__.py`, kami menggunakan `config.include('pyramid_jinja2')` untuk mengaktifkan add-on tersebut. Ini mendaftarkan renderer baru yang mengenali ekstensi `.jinja2`.
+3. **Renderer Jinja2**: Pada decorator view, kami mengubah parameter `renderer` menjadi `'home.jinja2'`. Meskipun sintaks variabelnya (`{{ name }}`) mirip dengan Chameleon (`${name}`), Jinja2 menawarkan fitur kontrol struktur (loops, blocks) yang sangat mirip dengan Django Templates.
