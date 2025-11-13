@@ -1,0 +1,7 @@
+# 03: Application Configuration with .ini Files
+
+## Analisis
+Pada langkah ini, kami menggunakan file konfigurasi `development.ini` untuk melakukan *bootstrap* aplikasi.
+1. **Server Configuration**: Bagian `[server:main]` mengatur agar aplikasi berjalan menggunakan server WSGI `waitress` pada port 6543.
+2. **Entry Point**: `pserve` membaca konfigurasi `[app:main]` -> `use = egg:tutorial`. Ini merujuk pada `entry_points` di `setup.py` yang mengarah ke fungsi `main` di dalam `tutorial/__init__.py`.
+3. **Separation of Concerns**: Kami memindahkan kode startup dari `app.py` ke `__init__.py` dan menghapus `app.py`. Ini membuat konfigurasi server terpisah dari logika kode Python.
