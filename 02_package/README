@@ -1,0 +1,6 @@
+# 02: Python Packages for Pyramid Applications
+
+## Analisis
+Dalam langkah ini, kami mengorganisir kode menjadi sebuah Python Package bernama `tutorial`. File `setup.py` digunakan untuk mendefinisikan dependensi (Pyramid dan Waitress) dan memungkinkan proyek diinstal dalam "development mode" (menggunakan `pip install -e .`). 
+
+Meskipun kami masih menjalankan aplikasi secara langsung melalui `python tutorial/app.py` (yang sebenarnya kurang umum untuk production), struktur ini memperkenalkan file `__init__.py` yang menandai direktori sebagai paket Python. Ini adalah langkah awal transisi dari skrip tunggal menuju aplikasi web yang terstruktur dengan baik.
