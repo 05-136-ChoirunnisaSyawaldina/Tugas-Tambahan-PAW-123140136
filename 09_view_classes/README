@@ -1,0 +1,7 @@
+# 09: Organizing Views With View Classes
+
+## Analisis
+Langkah ini mendemonstrasikan transformasi dari *Function-based Views* menjadi *Class-based Views*.
+1. **Pengelompokan Logika**: View `home` dan `hello` dikelompokkan ke dalam satu kelas `TutorialViews`. Ini memudahkan pengelolaan state dan dependencies (seperti objek `request` yang disimpan di `self.request`).
+2. **View Defaults**: Kami menggunakan decorator `@view_defaults(renderer='home.pt')` pada level kelas. Ini menerapkan konfigurasi renderer ke seluruh method di dalam kelas tersebut, sehingga mengurangi duplikasi kode (prinsip DRY - Don't Repeat Yourself).
+3. **Testing**: Unit test disesuaikan untuk menginstansiasi kelas `TutorialViews(request)` terlebih dahulu sebelum memanggil method view yang akan diuji.
