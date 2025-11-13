@@ -1,0 +1,7 @@
+# 06: Functional Testing with WebTest
+
+## Analisis
+Berbeda dengan unit test, *Functional Test* menguji aplikasi secara keseluruhan (end-to-end).
+1. **WebTest Library**: Kami menggunakan library `webtest` untuk membungkus aplikasi WSGI (`main({})`) ke dalam `TestApp`.
+2. **Simulasi Browser**: `self.testapp.get('/')` mensimulasikan request GET HTTP seolah-olah dilakukan oleh browser.
+3. **Verifikasi Body**: Kami memeriksa (`assertIn`) apakah respon HTML (`res.body`) benar-benar mengandung string `<h1>Hello World!</h1>`. Ini memastikan routing, view, dan rendering berjalan harmonis.
